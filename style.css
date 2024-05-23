@@ -4,9 +4,14 @@
   flex-shrink: 0;
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
   overflow-y: scroll;
 
   display: flex;
@@ -34,6 +39,7 @@ body {
   position: absolute;
   right: 0;
   height: 100%;
+  z-index: 2;
 }
 
 .bookmark-left {
@@ -41,6 +47,7 @@ body {
   left: 0;
   height: 100%;
   rotate: 180deg;
+  z-index: 2;
 }
 
 .company-intro {
@@ -64,11 +71,13 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
   border-radius: 8px;
+  z-index: 4;
 }
 
 .company-intro-text {
   text-align: center;
   font-size: 1.25rem;
+  padding: 1rem;
 }
 
 .dashed-line {
@@ -98,6 +107,10 @@ body {
   gap: 1.5rem;
 }
 
+.team-header {
+  padding: 8px 0;
+}
+
 .team-name {
   background-color: var(--main-color);
   padding: 8px 8px;
@@ -106,6 +119,7 @@ body {
   font-size: 1.1rem;
   font-weight: 600;
   border-radius: 8px;
+  z-index: 4;
 }
 
 .members {
@@ -122,15 +136,15 @@ body {
 }
 
 .member-count-2 {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .member-count-3 {
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .member-count-4 {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .member {
@@ -165,4 +179,69 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 0px;
+}
+
+@media screen and (width < 700px) {
+  .header {
+    height: 60px;
+  }
+
+  .bookmark-left,
+  .bookmark-right {
+    height: auto;
+    width: 120px;
+  }
+
+  .members-row {
+    gap: 16px;
+  }
+
+  .member-img {
+    width: 95px;
+  }
+
+  .team-footer {
+    height: 60px;
+  }
+}
+
+@media screen and (width < 480px) {
+  .header {
+    height: 40px;
+  }
+
+  .bookmark-left,
+  .bookmark-right {
+    height: auto;
+    width: 80px;
+  }
+
+  .members-row {
+    gap: 16px;
+  }
+
+  .member-img {
+    width: 80px;
+  }
+
+  .team-footer {
+    height: 40px;
+  }
+}
+
+@media screen and (width < 400px) {
+  .bookmark-left {
+    left: -40px;
+  }
+  .bookmark-right {
+    right: -40px;
+  }
+
+  .company-name {
+    min-width: 180px;
+  }
+
+  .member-count-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
