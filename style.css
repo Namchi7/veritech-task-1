@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  --main-color: #cb6be6;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.bookmark-right {
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+
+.bookmark-left {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  rotate: 180deg;
+}
+
+.company-intro {
+  width: 100%;
+  max-width: 900px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.company-name {
+  width: fit-content;
+  min-width: 250px;
+  background-color: var(--main-color);
+  padding: 8px 8px;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.company-intro-text {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.dashed-line {
+  width: 75%;
+  border-bottom: 3.5px dashed var(--main-color);
+}
+
+.our-team-heading {
+  font-size: 2rem;
+}
+
+.teams {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.team {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.team-name {
+  background-color: var(--main-color);
+  padding: 8px 8px;
+  text-align: center;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.members {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.members-row {
+  display: grid;
+  gap: 85px;
+}
+
+.member-count-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.member-count-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.member-count-4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.member-img {
+  aspect-ratio: 1/1;
+  width: 110px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.member-name {
+  font-weight: 600;
+}
+
+.member-designation {
+  color: red;
+}
+
+.team-footer {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+}
